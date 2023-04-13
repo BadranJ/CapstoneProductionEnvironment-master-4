@@ -1,0 +1,39 @@
+
+
+.cell_container{
+    -fx-background-color: #FFFFFF; /*white*/
+    -fx-background-radius: 10; /*gives the cells an slight curve arond the edges*/
+    -fx-effect: dropshadow(three-pass-box, #000000, 5, 0, 0, 7);
+}
+
+.report_icon_container{
+    -fx-background-color: #FFFFFF;
+    -fx-alignment: center;
+    -fx-spacing: 5;
+}
+
+.report_date_label{
+    -fx-text-fill: #AAAAAA;
+    -fx-font-weight: 700;
+}
+
+.report_username_label{
+    -fx-text-fill: #000000;
+    -fx-font-weight: 700;
+}
+
+.cell_container Line {
+    -fx-stroke: #EEEEEE; /* this is to give the line colour, different for this object*/
+}
+
+.report_amount_label{
+    -fx-background-color: #132A13;
+    -fx-background-radius: 2;
+    -fx-text-fill: #FFFFFF;
+    -fx-padding: 5;
+    -fx-font-weight: 700;
+}
+
+.report_icon_container Line {
+    -fx-stroke: #000FFF;
+}

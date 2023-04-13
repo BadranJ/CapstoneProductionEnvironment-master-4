@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+<?import javafx.scene.layout.*?>
+<!-- 3:55:31 in the video for the styling and CSS for open systems menu, slightly different
+
+also for the create closedSystem user that would start at 4:07
+
+the deposits section for the "admin" in the video is a simple and nice searching and add deposit UI, that is at around 5:00 in the video-->
+<AnchorPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="com.example.capstone.Controllers.OpenSystem.OpenSystemMenuController"
+            prefHeight="400.0" prefWidth="600.0">
+
+</AnchorPane>

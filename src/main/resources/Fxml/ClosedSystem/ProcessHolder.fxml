@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Text?>
+
+<HBox fx:id="ProcessContainer" prefWidth="600.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.capstone.Controllers.ClosedSystem.ProcessHolderController">
+    <VBox fx:id="State1Container" prefHeight="200.0" prefWidth="200.0">
+        <padding>
+            <Insets bottom="10.0" left="50.0" right="50.0" top="10.0" />
+        </padding>
+        <Text fx:id="firstStateLabel" strokeType="OUTSIDE" strokeWidth="0.0" text="State 1">
+            <VBox.margin>
+                <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+            </VBox.margin>
+        </Text>
+        <Label text="Pressure" />
+        <TextField fx:id="S1pressure" />
+        <Label text="Volume" />
+        <TextField fx:id="S1Volume" />
+        <Label text="Temperature" />
+        <TextField fx:id="S1temperature" />
+        <Label text="S" />
+        <TextField fx:id="S1S" />
+        <Label text="H" />
+        <TextField fx:id="S1H" />
+        <Label text="U" />
+        <TextField fx:id="S1U" />
+    </VBox>
+    <VBox fx:id="ProcessConfigurations" prefHeight="200.0" prefWidth="200.0">
+        <Label prefHeight="45.0" text="Process Type" />
+        <ChoiceBox fx:id="ProcessPicker" />
+        <Label prefHeight="50.0" text="N value" />
+        <TextField fx:id="NValue" />
+      <padding>
+         <Insets bottom="10.0" left="50.0" right="50.0" top="10.0" />
+      </padding>
+    </VBox>
+    <VBox fx:id="State2Container" layoutX="10.0" layoutY="10.0" prefHeight="200.0" prefWidth="200.0">
+        <padding>
+            <Insets bottom="10.0" left="50.0" right="50.0" top="10.0" />
+        </padding>
+        <Text fx:id="secondStateLabel" strokeType="OUTSIDE" strokeWidth="0.0" text="State 2">
+            <VBox.margin>
+                <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+            </VBox.margin>
+        </Text>
+        <Label text="Pressure" />
+        <TextField fx:id="S2pressure" />
+        <Label text="Volume" />
+        <TextField fx:id="S2volume" />
+        <Label text="Temperature" />
+        <TextField fx:id="S2temperature" />
+        <Label text="S" />
+        <TextField fx:id="S2S" />
+        <Label text="H" />
+        <TextField fx:id="S2H" />
+        <Label text="U" />
+        <TextField fx:id="S2U" />
+    </VBox>
+</HBox>

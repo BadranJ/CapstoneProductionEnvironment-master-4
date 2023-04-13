@@ -1,0 +1,87 @@
+
+
+.login_container{
+    -fx-background-color: #EEEEEE;
+}
+
+/* Logo Container Styles*/
+
+.login_logo_container{
+    -fx-background-color: #132A13;
+    -fx-alignment: center;
+}
+
+.login_logo_container Text{
+    -fx-font-size: 2em;
+    -fx-fill: #FFFFFF;
+}
+/* If it is defined under shapes in SceneBuilder,
+then we use the CSS command fill, if it is in containers, or controls then you use a background color effect*/
+
+.login_logo_container FontAwesomeIconView{
+    -fx-fill: #ECF39E;
+}
+
+/* Account selector Choicebox Styles */
+.account_selector{
+    -fx-background-color: #ECF39E;
+}
+
+
+/* Label contained within the account selector*/
+.account_selector .label{
+    -fx-text-fill: #132A13;
+    -fx-font-size: 1.1em;
+}
+
+.account_selector .arrow{
+    -fx-background-color: #132A13;
+}
+
+/* we used an id here in stead of the classes (.) to impact all choiceboxes*/
+#choice-box-popup-menu{
+    -fx-background-color: #ECF39E;
+}
+
+/* Login form styles */
+
+#choice-prompt-text{
+    -fx-font-weight: 400;
+}
+
+.login_form_container{
+    -fx-spacing: 15;
+    -fx-alignment: top_left;
+}
+
+/* here just saying Label is actually the same as .label for javafx css*/
+.login_form_container Label{
+    -fx-font-size: 1.1em;
+    -fx-font-weight: bold;
+}
+
+.input_field{
+    -fx-background-color: white;
+    -fx-pref-height: 35;
+    -fx-font-size: 1.2em;
+}
+
+.login_form_container Button{
+    -fx-background-color: #132A13;
+    -fx-text-fill: #FFFFFF;
+    -fx-pref-width: 350;
+    -fx-pref-height: 30;
+    -fx-font-size: 1.2em;
+}
+
+.login_form_container Button:hover{
+    -fx-cursor: hand; /* in normal css this would usually be pointer*/
+}
+
+.error_lbl {
+    -fx-text-fill: #FF0000;
+}
+
+
+
+

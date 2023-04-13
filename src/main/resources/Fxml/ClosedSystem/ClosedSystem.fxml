@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+<?import javafx.scene.layout.*?>
+
+<!-- so now we replaced the anchorpane with this border pane because it has 4-5 parts in it we can
+customize, and we are customizing it with our different windows so the left stays as the menu, and the middle changes
+
+additionally, because we removed the fx controller from this file, we need to manually add in the controller
+using premade functions within the ViewFactory class section that has to do with showing the closed system window
+
+
+we added a fx id to this borden pane so that we can reference it when we need to change the middle section of the border
+pane when we switch scenes through the menu-->
+
+<BorderPane fx:id="closedSystemParent" xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml">
+
+    <left>
+        <fx:include source="ClosedSystemMenu.fxml"/>
+    </left>
+
+    <center>
+        <fx:include source="Dashboard.fxml"/>
+<!--        <fx:include source="ProcessHolder.fxml"/>-->
+    </center>
+
+
+</BorderPane>
