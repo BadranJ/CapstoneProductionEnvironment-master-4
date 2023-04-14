@@ -64,17 +64,24 @@ public class Process extends ACProcess {
 
         //if state1 has all values check if its a valid state
 
+        //if state1 has all values check if its a valid state
+
         if(state1.hasAllValues()==true){
 
-            if(state1.getValues().get(1)*state1.getValues().get(2)!=state1.getValues().get(0)*R){
-                throw new IllegalArgumentException("The values for the state" +state1.getValues()+" are not valid");
+            double pv=state1.getValues().get(1)*state1.getValues().get(2);
+            double rt=state1.getValues().get(0)*R;
+
+            if(Math.abs(pv - rt) > 1e-6){ //for tolerance
+                throw new IllegalArgumentException("The values for the state " +state1.toString()+" are not valid \n since P=" + state1.getValues().get(1) +" * v="+state1.getValues().get(2)+ " !="+ " R=0.287 * T="+state1.getValues().get(0));
             }
         }
 
         //state2 as well
         if(state2.hasAllValues()==true){
-            if(state2.getValues().get(1)*state2.getValues().get(2)!=state2.getValues().get(0)*R){
-                throw new IllegalArgumentException("The values for the state" +state2.getValues()+" are not valid \n" + state2.getValues().get(1) +" * "+state2.getValues().get(2)+ " !="+ " 0.287 * "+state2.getValues().get(0));
+            double pv=state2.getValues().get(1)*state2.getValues().get(2);
+            double rt=state2.getValues().get(0)*R;
+            if(Math.abs(pv - rt) > 1e-6){
+                throw new IllegalArgumentException("The values for the state " +state2.toString()+" are not valid  \n since P=" + state2.getValues().get(1) +" * v="+state2.getValues().get(2)+ " !="+ " R=0.287 * T="+state2.getValues().get(0));
             }
         }
 

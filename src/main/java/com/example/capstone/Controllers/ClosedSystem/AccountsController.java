@@ -230,7 +230,7 @@ public class AccountsController implements Initializable {
             }
         });
 
-        
+
 
         clearButton.setOnAction(new EventHandler<ActionEvent>() {
             @Override
@@ -320,8 +320,39 @@ public class AccountsController implements Initializable {
 
             char processType = controller.getProcessType();
 
-            Process process = new Process(stateRight, stateLeft, processType);
-            ls.add(process);
+            double nValue = 0; // Initialize nValue with a default value (e.g., 0)
+            boolean isValidNValue = true;
+            if (processType == 'x' || processType == 'y') {
+                if (processType == 'y') {
+                    nValue = 1.005/0.718;
+                } else {
+                    if (!controller.NValue.getText().isEmpty()) {
+                        try {
+                            nValue = Double.parseDouble(controller.NValue.getText());
+                        } catch (NumberFormatException e) {
+                            // Show an error message if the entered text is not a valid number
+                            showErrorAlert("Invalid n value entered. Please enter a valid number.");
+                            isValidNValue = false;
+                        }
+                    } else {
+                        showErrorAlert("Please enter an n value for process type " + processType + ".");
+                        isValidNValue = false;
+                    }
+                }
+            }
+
+            if (isValidNValue) {
+                Process process;
+                if (processType == 'x' || processType == 'y') {
+                    // if the process type is polytropic or isentropic, create process with n
+                    process = new Process(stateRight, stateLeft, nValue, processType);
+                } else {
+                    // else use the constructor without the n value
+                    process = new Process(stateRight, stateLeft, processType);
+                }
+                ls.add(process);
+            }
+
         }
 
             return ls;
